@@ -31,9 +31,9 @@
 * 在page下 新建 login 文件夹；webpack插件 会以此文件夹名称 做出 [name].html
 * login文件夹 下新建 login.html   index.js    login.scss；
 注意这里的js一定要是index作为名称，否则报错；
-* 在 index.js 中 引入 login.scss （否则不加载css）；
-    import './login.scss'
-*login.html 初始化结构 可以直接复制 ../page/template.html ；然后把 login 独立结构 放到 .content 下就可以了；
+* 在 index.js 中 引入 login.scss （否则不加载css）； //import './login.scss'
+
+* login.html 初始化结构 可以直接复制 ../page/template.html ；然后把 login 独立结构 放到 .content 下就可以了；
 打包的时候 会自动把js和css 插入；
 
 ### 怎么加载 img ？
