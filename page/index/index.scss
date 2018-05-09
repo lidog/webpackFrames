@@ -1,0 +1,105 @@
+$headerHeight: 60px;
+
+.content{
+  .banner{
+    padding-top: $headerHeight;
+    color: #fff;
+    background: url("../../images/banner.jpg") no-repeat 0 0;
+    .banner-top{
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 20px;
+      img{
+        width: auto;
+        height: 160px;
+      }
+    }
+    .banner-bottom{
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 30px;
+      li{
+        float: left;
+        width: 33.3%;
+        text-align: center;
+        position: relative;
+        img{
+          width: 150px;
+          height: 150px;
+        }
+        p{
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin:0 auto;
+          width: 150px;
+          bottom: 15px;
+          .title{
+            font-size: 16px;
+          }
+          span{
+            font-size: 12px;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .banner-module{
+      border-top: 2px solid #000;
+      background: rgba(0,0,0,0.3);
+      margin-top: 20px;
+      li{
+        float: left;
+        width: 32%;
+        text-align: center;
+        font-size: 12px;
+        padding: 20px 0;
+        h4{
+          font-size: 16px;
+          color:#00b7ee;
+          margin-bottom: 10px;
+        }
+        p{
+          margin-bottom: 5px;
+        }
+      }
+      li:nth-child(2){
+        margin: 0 1%;
+        position:relative;
+      }
+      li:nth-child(2):after,li:nth-child(2):before{
+        position: absolute;
+        content: "";
+        width: 2px;
+        background-color: #000;
+        height: 100%;
+        right: 0px;
+        top:0;
+      }
+      li:nth-child(2):before{
+        left: 0;
+      }
+    }
+  }
+  .server{
+    .server-module{
+      li{
+        width: 16.66667%;
+        h4{
+          font-size: 14px;
+          color: #262626;
+          font-weight: bolder;
+          margin:2em 0 1.6rem 0;
+        }
+        p{
+          font-size: 12px;
+          color: #969696;
+          margin:2em 0 1.6rem 0;
+          padding: 0 1rem;
+          text-indent: 2em;
+        }
+      }
+    }
+  }
+}
