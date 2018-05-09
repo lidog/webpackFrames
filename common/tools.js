@@ -10,7 +10,7 @@ import notie from  "../plugins/notie-master/dist/notie.min.js"
 
 export default {
     say:function () {
-      alert('lidog')
+      notie.alert({ type: 4, text: "谢谢你的使用，记得star一下哦", time:2 })
     },
     //实现img html使用<span class="data-img" img-src="newLogo.png"></span>
     getImg:function () {

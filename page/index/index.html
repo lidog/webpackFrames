@@ -7,83 +7,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>首页</title>
+    <title>template</title>
 </head>
 <body>
 <div id="header"></div>
 <div class="content">
-    <div class="banner">
-        <div class="container">
-            <div class="banner-top"><span img-src="font2.png"></span></div>
-            <ul class="banner-bottom clearfix" id="bannerBottom"></ul>
-            <script type="text/html" id="bannerBottomTpl">
-                <%for(var i = 0; i < list.length; i++) {%>
-                    <li><a href="<%=list[i].link%>"><span img-src="<%=list[i].image%>"></span></a><a href="<%=list[i].link%>"><p><span class="title"><%=list[i].name%></span><br><span><%=list[i].describe%></span></p></a></li>
-                <%}%>
-            </script>
-        </div>
-        <div class="banner-module">
-            <ul class="container clearfix" id="sellObj">
-            </ul>
-            <script type="text/html" id="sellObjTpl">
-                <%for(var i = 0; i < list.length; i++) {%>
-                <li>
-                    <h4><%=list[i].Business%></h4>
-                    <p><%=list[i].p1%></p>
-                    <p><%=list[i].p2%></p>
-                </li>
-                <%}%>
-            </script>
-        </div>
-    </div>
 
-    <div class="section">
-        <div class="container">
-            <div class="server">
-                <div class="server-title">
-                    <h3>链能服务</h3>
-                    <p>为工商业企业提供专业、智能、放心的一体化电力服务。</p>
-                </div>
-                <ul class="server-module clearfix" id="serverModule"></ul>
-                <script type="text/html" id="serverModuleTpl">
-                    <%for(var i = 0; i < list.length; i++) {%>
-                        <li>
-                            <a href="<%=list[i].link%>"><span img-src="<%=list[i].image%>"></span></a>
-                            <h4><%=list[i].title%></h4>
-                            <p><%=list[i].describe%></p>
-                        </li>
-                    <%}%>
-                </script>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="server">
-                <div class="server-title">
-                    <h3>电量团购</h3>
-                    <p>整合多家企业购电需求，组织团购，提高企业的购电议价能力，获得大用户的优惠幅度。</p>
-                </div>
-                <ul class="electric-sell clearfix" id="electricSell"></ul>
-                <script type="text/html" id="electricSellTpl">
-                    <%for(var i = 0; i < list.length; i++) {%>
-                        <li>
-                            <a href="<%=list[i].link%>">
-                                <span img-src="<%=list[i].image%>"></span>
-                            </a>
-                            <h4><a href="<%=list[i].link%>">
-                                <span class="title-icon"><%=list[i].state%></span>
-                                <%=list[i].title%>
-                            </a></h4>
-                            <p>目前已购买总电量：<span><%=list[i].sellNum%></span>万/千瓦时</p>
-                            <div class="btn">查看</div>
-                        </li>
-                    <%}%>
-                </script>
-            </div>
-        </div>
-    </div>
+    <!--your content-->
+    <h1 class="mid-center">自定义内容</h1>
 
 </div>
 <div id="footer"></div>
