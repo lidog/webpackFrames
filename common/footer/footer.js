@@ -4,7 +4,6 @@
  * @description 
  */
 
-
 $(function () {
     initEvent()
 })
@@ -12,6 +11,7 @@ $(function () {
 function initEvent() {
     var html = require('html-withimg-loader!./footer.html');
     $("#footer").html(html);
+    tools.getImg();
 }
 
 

@@ -6,6 +6,7 @@ const DefinePlugin = require('webpack/lib/DefinePlugin');
 const { AutoWebPlugin  } = require('web-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
+
 const autoWebPlugin = new AutoWebPlugin('./page',{
     template:function (pageName) {
         return './page/'+pageName+'/'+pageName+'.html'
@@ -17,6 +18,8 @@ const autoWebPlugin = new AutoWebPlugin('./page',{
         "./plugins/font/iconfont.css",
         "./plugins/notie-master/dist/notie.min.css",
         "./common/common.js",
+        "./common/header/header.js",
+        "./common/footer/footer.js",
     ],
     commonsChunk:{
         name:'common',
@@ -26,17 +29,15 @@ const autoWebPlugin = new AutoWebPlugin('./page',{
 module.exports = {
     entry: autoWebPlugin.entry({
         // 这里可以加入你额外需要的 Chunk 入口
-        header:"./common/header/header.js",
-        footer:"./common/footer/footer.js",
     }),
     output:{
         // filename: '[name]_[chunkhash:8].js',
         filename: '[name].js',
         path:path.resolve(__dirname,'./dist'),
     },
-    // externals: {
-    //     jquery: 'jQuery',
-    // },
+    externals: {
+        jquery: 'jQuery',
+    },
     resolve:{
         alias:{
             common:'./common',
@@ -46,6 +47,8 @@ module.exports = {
     devtool:'inline-source-map',
     module: {
         rules: [
+            {test: require.resolve("jquery"), use: "expose-loader?$"},
+            {test: require.resolve("jquery"), use: "expose-loader?jQuery"},
             {
                 test: /\.html$/,
                 use: {
@@ -106,22 +109,22 @@ module.exports = {
                 NODE_ENV: JSON.stringify('production')
             }
         }),
-       /* new UglifyJsPlugin({
-            // 最紧凑的输出
-            beautify: false,
-            // 删除所有的注释
-            comments: false,
-            compress: {
-                // 在UglifyJs删除没有用到的代码时不输出警告
-                warnings: false,
-                // 删除所有的 `console` 语句，可以兼容ie浏览器
-                drop_console: true,
-                // 内嵌定义了但是只用到一次的变量
-                collapse_vars: true,
-                // 提取出出现多次但是没有定义成变量去引用的静态值
-                reduce_vars: true,
-            }
-        }),*/
+         new UglifyJsPlugin({
+         // 最紧凑的输出
+         beautify: false,
+         // 删除所有的注释
+         comments: false,
+         compress: {
+         // 在UglifyJs删除没有用到的代码时不输出警告
+         warnings: false,
+         // 删除所有的 `console` 语句，可以兼容ie浏览器
+         drop_console: true,
+         // 内嵌定义了但是只用到一次的变量
+         collapse_vars: true,
+         // 提取出出现多次但是没有定义成变量去引用的静态值
+         reduce_vars: true,
+         }
+         }),
     ]
 }
 

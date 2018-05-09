@@ -4,12 +4,12 @@
  * @description 
  */
 
-// import $ from "jQuery";
+
 import tools from "./tools.js";
 import API from "./apiConfig.js";
 
+
 //暴露给全局   其他页面可以直接 使用 该对象下的方法
-// window.$ = $;   //直接使用的对象一定要在 $(function(){ 这里面使用 })
 window.tools = tools;   //直接使用的对象一定要在 $(function(){ 这里面使用 })
 window.API = API;
 

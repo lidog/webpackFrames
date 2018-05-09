@@ -4,7 +4,6 @@
  * @description 
  */
 
-
 $(function () {
     initEvent();
     initNavigation();
@@ -13,7 +12,9 @@ $(function () {
 function initEvent() {
     var html = require('html-withimg-loader!./header.html');
     $("#header").html(html);
-    
+    tools.getImg();
+
+
     //登录
     $(".login").click(function () {
         $(this).addClass('active').siblings().removeClass('active');
@@ -66,7 +67,6 @@ function initNavigation() {
     });
     $("#pageLink li").find("a[href='"+page+"']").parent().addClass("active").siblings().removeClass("active");
 }
-
 
 //获取整体数据
 function getData() {
