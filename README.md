@@ -22,16 +22,19 @@
 
     npm run view
 
-    以上代码会打包错一个dist 文件夹；你可以直接点击里面的某个html 预览效果；
+以上代码会打包出一个dist 文件夹；你可以直接点击里面的某个html 预览效果；
 
 ## 怎么增加你的东西
 
 ### 增加一个 login 页面
 
 * 在page下 新建 login 文件夹；webpack插件 会以此文件夹名称 做出 [name].html
-* login文件夹 下新建 login.html ,index.js,login.scss；注意这里的js一定要是index.js 作为名称，否则报错；
-   login.html 初始化结构 可以直接复制 ../page/template.html ；然后把你的login 独立结构 放到 .content 下就可以了；
-   打包的时候 会自动把js和css 插入；
+* login文件夹 下新建 login.html   index.js    login.scss；
+注意这里的js一定要是index作为名称，否则报错；
+* 在 index.js 中 引入 login.scss （否则不加载css）；
+    import './login.scss'
+*login.html 初始化结构 可以直接复制 ../page/template.html ；然后把 login 独立结构 放到 .content 下就可以了；
+打包的时候 会自动把js和css 插入；
 
 ### 怎么加载 img ？
 
@@ -59,11 +62,12 @@
 初次打包可能会出现以下bug
 
 ![Alt bug](https://github.com/lidog/webpackFrames/blob/master/images/1.png)
-![Alt fixBug](https://github.com/lidog/webpackFrames/blob/master/images/1.png)
+![Alt fixBug](https://github.com/lidog/webpackFrames/blob/master/images/2.png)
 
 
 这是因为安装依赖的时候，多了一个 webpack3.11.0；因为版本不一样导致找不到变量；
-去node_modules 下删除掉 这个 _webpack3.11.0 ;在此运行
+去 node_modules 下删除掉 这个 _webpack3.11.0 ;
+再次运行
 
    npm run view
 
