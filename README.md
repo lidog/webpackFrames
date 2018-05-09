@@ -58,6 +58,10 @@
 
 初次打包可能会出现以下bug
 
+![Alt bug](https://github.com/lidog/webpackFrames/blob/master/images/1.png)
+![Alt fixBug](https://github.com/lidog/webpackFrames/blob/master/images/1.png)
+
+
 这是因为安装依赖的时候，多了一个 webpack3.11.0；因为版本不一样导致找不到变量；
 去node_modules 下删除掉 这个 _webpack3.11.0 ;在此运行
 
