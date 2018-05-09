@@ -7,7 +7,7 @@
 $(function () {
     initEvent();
     initNavigation();
-})
+});
 
 function initEvent() {
     var html = require('html-withimg-loader!./header.html');
@@ -40,7 +40,7 @@ function initEvent() {
 
 
     
-}
+};
 
 /**
  * 功能：高亮当前页面
@@ -66,7 +66,7 @@ function initNavigation() {
         }
     });
     $("#pageLink li").find("a[href='"+page+"']").parent().addClass("active").siblings().removeClass("active");
-}
+};
 
 //获取整体数据
 function getData() {
@@ -78,4 +78,4 @@ function getData() {
         data[key]=val;
     })
     return data;
-}
+};

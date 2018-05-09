@@ -6,12 +6,13 @@
 
 // require('../css/index.css');
 
-import './index.scss'
+import './index.scss';
 
 $(function () {
     initEvent()
-})
+});
 
 function initEvent() {
     tools.say();
-}
+
+};

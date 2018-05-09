@@ -15,13 +15,11 @@ window.API = API;
 
 $(function () {
     initEvent()
-})
+});
 
 function initEvent() {
     //全部运行此函数,加载本地图片资源；如果是服务器图片资源，直接用img标签即可
     tools.getImg();
 
-    //设置content 最小高度
-    $(".content").css("min-height",document.body.clientHeight - $(".footer").outerHeight());
-}
+};
  

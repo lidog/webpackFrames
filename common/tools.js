@@ -8,8 +8,8 @@ import template from "../plugins/template"
 import notie from  "../plugins/notie-master/dist/notie.min.js"
 
 export default {
-    myName:function () {
-        return "镇华.Li"
+    say:function () {
+        notie.alert({ type: 1, text: "hello world！", time:2 })
     },
     //实现img html使用<span class="data-img" img-src="newLogo.png"></span>
     getImg:function () {
