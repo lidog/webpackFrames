@@ -1,0 +1,107 @@
+$headerHeight: 60px;
+//$headerBg:#393f4f;
+$headerBg: rgba(0, 0, 0, 0.5);
+
+.header{
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  height: $headerHeight;
+  background-color: $headerBg;
+  z-index: 1000;
+  .container{
+    .logo{
+      float: left;
+      margin-top: 10px;
+      span[img-src]{
+        height: 40px;
+        width: 90px;
+      }
+    }
+    .page-link{
+      float: right;
+      li{
+        height: $headerHeight - 3;
+        line-height: $headerHeight;
+        float: left;
+        font-size: 16px;
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        position: relative;
+        a{
+          display: inline-block;
+          color: #fff;
+          padding:0 15px;
+        }
+      }
+      li:hover{
+        text-decoration: none;
+        border-bottom-color: #00a3cf;
+        a{
+          color: #fff;
+        }
+      }
+      li.active{
+        text-decoration: none;
+        border-bottom-color: #00a3cf;
+        a{
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .login.active .login-box{
+    display: block;
+  }
+  .login{
+    position: relative;
+    .login-box{
+      background-color: #fff;
+      cursor: auto;
+      display: none;
+      font-size: 14px;
+      position: absolute;
+      width: 200px;
+      top: 70px;
+      left: -140%;
+      line-height: normal!important;
+      padding: 20px;
+      border: 1px solid #a9a9a9;
+      border-radius: 5px;
+      box-shadow: 1px 1px 10px 0px #ccc;
+    }
+    .btn{
+      margin-bottom: 0;
+    }
+    .form-part{
+      padding: 20px 0 20px 0;
+    }
+    .form-item{
+      .form-item-label{
+        min-width: auto;
+      }
+      .form-item-content{
+        min-width: auto;
+      }
+    }
+
+    .login-type{
+      .tab-item{
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 5px;
+        padding: 3px 10px;
+        border: 1px solid #a9a9a9;
+        border-radius: 3px;
+      }
+      .tab-item.on{
+        color: #fff;
+        background-color: #3bb4f2;
+        border-color: #3bb4f2;
+      }
+    }
+  }
+}
+
