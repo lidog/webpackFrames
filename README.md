@@ -44,6 +44,9 @@
 * login.html 初始化结构 可以直接复制 ../page/template.html ；然后把 login 独立结构 放到 .content 下就可以了；
 打包的时候 会自动把js和css 插入；
 
+* 如果是顶部导航的页面；需要在header.js 中把新增 html 加入 navigation 数组中
+
+
 ### 怎么加载 img ？
 
    html中使用图片,因为webpack不能直接打包img标签的图片；所以要通过下面的方式插入图片
