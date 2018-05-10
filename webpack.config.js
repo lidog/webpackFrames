@@ -81,7 +81,7 @@ module.exports = {
                 test: /\.js$/,
                 use: ['babel-loader'],
                 exclude: path.resolve(__dirname,"./node_modules"),
-                include: path.resolve(__dirname, "./js"),
+                include: [path.resolve(__dirname, "./common")],
             },
             {
                 test:/\.scss/,
@@ -109,7 +109,7 @@ module.exports = {
                 NODE_ENV: JSON.stringify('production')
             }
         }),
-         /*new UglifyJsPlugin({
+       /*  new UglifyJsPlugin({
              // 最紧凑的输出
              beautify: false,
              // 删除所有的注释
