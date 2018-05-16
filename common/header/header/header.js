@@ -13,7 +13,6 @@ function initEvent() {
     var html = require('html-withimg-loader!./header.html');
     $("#header").html(html);
     tools.getImg();
-
 };
 
 /**
@@ -34,4 +33,3 @@ function initNavigation() {
     });
     $("#pageLink li").find("a[href='"+page+"']").parent().addClass("active").siblings().removeClass("active");
 };
-

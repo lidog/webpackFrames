@@ -1,4 +1,4 @@
-# 一个打包多页面的webpack脚手架
+# webpack打包web多页面开发的脚手架
 
 ## 背景：
 
@@ -44,6 +44,9 @@
 * login.html 初始化结构 可以直接复制 ../page/template.html ；然后把 login 独立结构 放到 .content 下就可以了；
 打包的时候 会自动把js和css 插入；
 
+* 如果是顶部导航的页面；需要在header.js 中把新增 html 加入 navigation 数组中
+
+
 ### 怎么加载 img ？
 
    html中使用图片,因为webpack不能直接打包img标签的图片；所以要通过下面的方式插入图片
@@ -63,21 +66,6 @@
 
 ### plugins 文件夹下 是用到的一些插件；
 
-
-
-## bug
-
-初次打包可能会出现以下bug
-
-![Alt bug](https://github.com/lidog/webpackFrames/blob/master/images/1.png)
-![Alt fixBug](https://github.com/lidog/webpackFrames/blob/master/images/2.png)
-
-
-这是因为安装依赖的时候，多了一个 webpack3.11.0；因为版本不一样导致找不到变量；
-去 node_modules 下删除掉 这个 _webpack3.11.0 ;
-再次运行
-
-   npm run view
 
 
 
