@@ -1,6 +1,7 @@
 
 const path = require('path');
-const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
+// const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const { AutoWebPlugin  } = require('web-webpack-plugin');
@@ -109,7 +110,7 @@ module.exports = {
                 NODE_ENV: JSON.stringify('production')
             }
         }),
-         /*new UglifyJsPlugin({
+         new UglifyJsPlugin({
              // 最紧凑的输出
              beautify: false,
              // 删除所有的注释
@@ -124,7 +125,7 @@ module.exports = {
                  // 提取出出现多次但是没有定义成变量去引用的静态值
                  reduce_vars: true,
              }
-         }),*/
+         }),
     ]
 }
 
