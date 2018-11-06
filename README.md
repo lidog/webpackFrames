@@ -39,6 +39,8 @@
     let product = false;
 
 product 改为false 以后 会自动代理请求到你配置的域。
+当你要打包dist 的时候，就要吧它改为false。
+
 代理目标域名在webpack.config.js 中配置
 
     
