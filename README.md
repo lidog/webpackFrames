@@ -29,6 +29,22 @@
 
 以上代码会打包出一个dist 文件夹；你可以直接点击里面的某个html 预览效果；
 
+    npm run server
+    
+会打开浏览器，运行代码，本地调试。 
+因为接口可能需要跨域，所以打开tools.js
+   
+   
+    //是否是生产环境
+    let product = false;
+
+product 改为false 以后 会自动代理请求到你配置的域。
+代理目标域名在webpack.config.js 中配置
+
+    
+
+
+
 ## 怎么增加你的东西
 
 ### 增加一个 login 页面
