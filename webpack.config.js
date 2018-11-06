@@ -110,11 +110,7 @@ module.exports = {
                 NODE_ENV: JSON.stringify('production')
             }
         }),
-<<<<<<< HEAD
-         new UglifyJsPlugin({
-=======
-       /*  new UglifyJsPlugin({
->>>>>>> 8e0a2c3afcc0bb89122aaba9e8898aa94f0fb91b
+       new UglifyJsPlugin({
              // 最紧凑的输出
              beautify: false,
              // 删除所有的注释
